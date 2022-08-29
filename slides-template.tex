@@ -6,8 +6,11 @@ xcolor={dvipsnames} % https://tex.stackexchange.com/a/74807
 
 \usepackage{amsfonts}
 \usepackage{amsmath}
+\usepackage{wrapfig}
 \usepackage{physics} 
 \usepackage{mathtools} 
+\usepackage{qrcode}
+\usepackage[russian]{babel} %Comment this line and delete all russian text for ENGLISH
 \usepackage{graphicx} % Allows including images
 \usepackage{tikz}
 
@@ -23,13 +26,14 @@ xcolor={dvipsnames} % https://tex.stackexchange.com/a/74807
 % https://tex.stackexchange.com/a/146021
 \setbeamerfont{footnote}{size=\tiny}
 
+
 % fontsize at the end
 \AtBeginBibliography{\small}
 
 % https://en.wikibooks.org/wiki/LaTeX/Colors
 \newcommand{\blue}[1]{\textcolor{NavyBlue}{#1}}
 \newcommand{\red}[1]{\textcolor{BrickRed}{#1}}
-\newcommand{\green}[1]{\textcolor{green}{#1}}
+\newcommand{\green}[1]{\textcolor{green!50!black}{#1}}
 \newcommand{\white}[1]{\textcolor{white}{#1}}
 
 % ------------
@@ -80,6 +84,10 @@ xcolor={dvipsnames} % https://tex.stackexchange.com/a/74807
 %\usecolortheme{seahorse}
 %\usecolortheme{whale}
 %\usecolortheme{wolverine}
+\AtEveryCitekey{
+  \clearfield{issn} %don't show this in citations
+  \clearfield{note}
+}
 
 
 % ------------
@@ -112,22 +120,28 @@ xcolor={dvipsnames} % https://tex.stackexchange.com/a/74807
 
 \addtobeamertemplate{frametitle}{}{%
 \begin{tikzpicture}[remember picture,overlay]
-	\node[anchor=north east,yshift=2pt] at (current page.north east) {\includegraphics[height=0.6cm]{fig/ANU_Primary_Horizontal_GoldBlack}};
+	\node[anchor=north east,yshift=2pt] at (current page.north east) {\includegraphics[height=0.7cm]{fig/logo}};
 \end{tikzpicture}}
+
+
+%\pgfdeclareimage[height=1.3cm]{uni}{fig/logo}
+\logo{\pgfuseimage{uni}}
+
 
 
 %-------------------
 %	title settings
 %-------------------
 
-\title[Short title]{\textbf{Long title}} 
+\title[Short title]{\textbf{Long (long  long long long long long) title}} 
 
 \author[Ivan Toftul]{
 	\textbf{Ivan Toftul}, 
-	Your Collegues, ...
+	Your Colleagues, ...
 } 
-\institute[ANU]{
-	Australian National University \\ 
+
+\institute[ITMO]{
+	Faculty of Physics, ITMO University \\ 
 	\medskip
 	\texttt{toftul.ivan@gmail.com} 
 }
@@ -144,33 +158,65 @@ xcolor={dvipsnames} % https://tex.stackexchange.com/a/74807
 
 \section{Introduction}
 
-\begin{frame}[c]{Introduction}
+\begin{frame}[t]{Introduction}
 	\begin{columns}
 		\begin{column}{0.4\linewidth}
 			\begin{itemize}
-				\item One
-				\item Two
+				\item Don't forget to cite everything, that you haven't done by youself
+				\item \green{Если картинку рисовали не вы, должна быть ссылка}
+				\item Пример QR-кода \qrcode[hyperlink,height=0.5in]{https://clck.ru/vzHWc}
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.6\linewidth}
 			\begin{figure}
-				\includegraphics[width=1.0\linewidth]{fig/VSHwiki}
+				\includegraphics[width=1.0\linewidth]{fig/harmonicscalibri0}
+				{\raggedright\tiny Source:~\fullcite{Gladyshev2022-Boundstatesinthec}\par}
 			\end{figure}
 		\end{column}
 	\end{columns}
 \end{frame}
 
-\begin{frame}[c]{Second slide in introduction}
-	\[
-		\int \dd x f(x)
-	\]
+\begin{frame}[t]{Relevance of the work}
+	\begin{columns}
+		\begin{column}{0.2\linewidth}
+			\begin{itemize}
+				\item One
+				\item Two
+				\item Three				
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.3\linewidth}
+			\begin{figure}
+				\includegraphics[width=1.0\linewidth]{fig/Vector_fig}
+				\caption{Nice Utia}
+				 {\raggedright\tiny Source: \fullcite{Utia}\par}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.4\linewidth}
+			\begin{figure}
+				\includegraphics[width=0.9\linewidth]{fig/bicwiki0}
+				\caption{BIC Illustration}
+				 {\raggedright\tiny Source:\fullcite{BICwiki}\par}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Постановка задачи}
+\begin{frame}[t]{Постановка задачи}
+	\begin{figure}
+      
+				\includegraphics[width=0.4\linewidth]{fig/scheme.png}
+				\caption{Схема установки/иллюстрация основной идеи/геометрия задачи~\footfullcite{Wigner}}
+	\end{figure}
+	Какой-то текст, или, например, формула $\int\limits_{-\infty}^\infty  e^{-x^2} \dd x=\sqrt\pi$
 \end{frame}
 
 
 
 \section{Results}
 \subsection{First}
-\begin{frame}[c]{First slide with results}
+\begin{frame}[t]{First slide with results}
 	From \footfullcite{Muldoon1996Feb} we have
 	\[
 		\sin(x) \approx x
@@ -184,14 +230,27 @@ xcolor={dvipsnames} % https://tex.stackexchange.com/a/74807
 \end{frame}
 
 \subsection{Second}
-\begin{frame}[c]{Second slide with results}
-	\[
-	\sin(x) \approx x + \frac{x^3}{3!}
-	\]
+\begin{frame}[t]{Second slide with results}
+	\begin{columns}
+		\begin{column}{0.4\linewidth}
+			\begin{itemize}
+				\item One
+				\item Two
+				\item Three				
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.4\linewidth}
+			\begin{figure}
+				\includegraphics[width=0.9\linewidth]{fig/bicwiki0}
+				\caption{BIC Illustration}
+				 {\raggedright\tiny Source:\fullcite{BICwiki}\par}
+			\end{figure}
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \section{Conclusion}
-\begin{frame}[c]{Conclusions}
+\begin{frame}[t]{Conclusions}
 	\begin{enumerate}
 		\item One
 		\item Two
@@ -199,7 +258,7 @@ xcolor={dvipsnames} % https://tex.stackexchange.com/a/74807
 \end{frame}
 
 
-\begin{frame}[c]{References}
+\begin{frame}[t]{References}
 \printbibliography
 \end{frame}
 
