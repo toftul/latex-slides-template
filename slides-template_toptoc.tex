@@ -132,116 +132,115 @@ xcolor={dvipsnames} % https://tex.stackexchange.com/a/74807
 
 \begin{document}
 	
-	\begin{frame}
-		\titlepage 
-	\end{frame}
-	
-	\section{Introduction}
-	
-	\begin{frame}[c]{Introduction}
-		\begin{columns}
-			\begin{column}{0.4\linewidth}
-				\begin{itemize}
-					\item One
-					\item Two
-				\end{itemize}
-			\end{column}
-			\begin{column}{0.6\linewidth}
-				\begin{figure}
-					\includegraphics[width=1.0\linewidth]{fig/VSHwiki}
-				\end{figure}
-			\end{column}
-		\end{columns}
-	\end{frame}
-	
-	\begin{frame}[c]{Second slide in introduction}
-		\[
-			\int \dd x f(x)
-		\]
-	\end{frame}
-	
-	
-	
-	\section{Results}
-	\begin{frame}[c]{First slide with results}
-		From \footfullcite{Muldoon1996Feb} we have
-		\[
-			\sin(x) \approx x
-		\]
-		\begin{block}{Example}
-			For $x = 0.1$ we have 
-			\[
-				\sin (0.1) = 0.09983341664682815
-			\]
-		\end{block}
-	\end{frame}
-	
-	\begin{frame}[c]{Second slide with results}
-		\[
-		\sin(x) \approx x + \frac{x^3}{3!}
-		\]
-	\end{frame}
-	
-	\section{Conclusion}
-	\begin{frame}[c]{Conclusions}
-		\begin{enumerate}
-			\item One
-			\item Two
-		\end{enumerate}
-	\end{frame}
+\begin{frame}
+	\titlepage 
+\end{frame}
 
-\section{References}
+\section{Introduction}
+
+\begin{frame}[c]{Introduction}
+	\begin{columns}
+		\begin{column}{0.4\linewidth}
+			\begin{itemize}
+				\item One
+				\item Two
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.6\linewidth}
+			\begin{figure}
+				\includegraphics[width=1.0\linewidth]{fig/VSHwiki}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}[c]{Second slide in introduction}
+	\[
+		\int \dd x f(x)
+	\]
+\end{frame}
+
+
+
+\section{Results}
+\begin{frame}[c]{First slide with results}
+	From \footfullcite{Muldoon1996Feb} we have
+	\[
+		\sin(x) \approx x
+	\]
+	\begin{block}{Example}
+		For $x = 0.1$ we have 
+		\[
+			\sin (0.1) = 0.09983341664682815
+		\]
+	\end{block}
+\end{frame}
+
+\begin{frame}[c]{Second slide with results}
+	\[
+	\sin(x) \approx x + \frac{x^3}{3!}
+	\]
+\end{frame}
+
+\section{Conclusion}
+\begin{frame}[c]{Conclusions}
+	\begin{enumerate}
+		\item One
+		\item Two
+	\end{enumerate}
+\end{frame}
+
 \begin{frame}[c]{References}
 	\printbibliography
 \end{frame}
 	
 	
-	\section{Extra slides}
-	
-	\begin{frame}{$\hat{\chi}^{(2)}_{\text{2D TMDC}}$ tensor in cylindrical coordinates}
-		\begin{equation*}
-			\chi^{(2)}_{\{\ell n m\}_{\text{cyl}}} = R^{-1}_{\ell i} R^{-1}_{n j} R^{-1}_{m k} \chi^{(2)}_{\{ijk\}_{\text{cart}}}, \qquad R^{-1}(\varphi) = \begin{pmatrix}
-				\cos(\varphi) & \sin(\varphi) & 0 \\
-				-\sin(\varphi) & \cos(\varphi) & 0 \\
-				0 & 0  & 1
-			\end{pmatrix}
-		\end{equation*}
-		{\tiny\begin{align*}
-				\chi^{(2)}_{\text{2D TMDC}}  = \tilde{\chi}^{\text{TMDC}}_{\text{2D}}
-				&\left[\left[\begin{array}{ccc}
-					0 & -1 & 0 \\
-					-1 & 0 & 0 \\
-					0 & 0 & 0
-				\end{array}\right]\left[\begin{array}{ccc}
-					-1 & 0 & 0 \\
-					0 & 1 & 0 \\
-					0 & 0 & 0
-				\end{array}\right]\left[\begin{array}{lll}
-					0 & 0 & 0 \\
-					0 & 0 & 0 \\
-					0 & 0 & 0
-				\end{array}\right]\right]_{(\vu{x}\vu{y}\vu{z})}
-				\\ = \tilde{\chi}^{\text{TMDC}}_{\text{2D}}
-				&\left[\left[\begin{array}{ccc}
-					-\sin (3 \varphi) & -\cos (3 \varphi) & 0 \\
-					-\cos (3 \varphi) & \sin (3 \varphi) & 0 \\
-					0 & 0 & 0
-				\end{array}\right]\left[\begin{array}{ccc}
-					-\cos (3 \varphi) & \sin (3 \varphi) & 0 \\
-					\sin (3 \varphi) & \cos (3 \varphi) & 0 \\
-					0 & 0 & 0
-				\end{array}\right]\left[\begin{array}{lll}
-					0 & 0 & 0 \\
-					0 & 0 & 0 \\
-					0 & 0 & 0
-				\end{array}\right]\right]_{(\vu{r},\vu{\boldsymbol{\varphi}}, \vu{z})}
-				\\ =
-				\tilde{\chi}^{\text{TMDC}}_{\text{2D}} & \bigg[ 
-				\frac{1}{2} e^{-3i \varphi} \left( \vu{\boldsymbol{\varphi}} \vu{\boldsymbol{\varphi}} \vu{\boldsymbol{\varphi}} + i \vu{\boldsymbol{\varphi}} \vu{\boldsymbol{\varphi}} \vu{r} + i \vu{\boldsymbol{\varphi}} \vu{r} \vu{\boldsymbol{\varphi}} - \vu{\boldsymbol{\varphi}} \vu{r} \vu{r} + i \vu{r} \vu{\boldsymbol{\varphi}} \vu{\boldsymbol{\varphi}} - \vu{r} \vu{\boldsymbol{\varphi}} \vu{r} - \vu{r} \vu{r} \vu{\boldsymbol{\varphi}} - i \vu{r} \vu{r} \vu{r}\right) 
-				\nonumber \\ &
-				+ \frac{1}{2} e^{+3i \varphi}\left( \vu{\boldsymbol{\varphi}} \vu{\boldsymbol{\varphi}} \vu{\boldsymbol{\varphi}} - i \vu{\boldsymbol{\varphi}} \vu{\boldsymbol{\varphi}} \vu{r} -i \vu{\boldsymbol{\varphi}} \vu{r} \vu{\boldsymbol{\varphi}} - \vu{\boldsymbol{\varphi}} \vu{r} \vu{r}  - i\vu{r} \vu{\boldsymbol{\varphi}} \vu{\boldsymbol{\varphi}} - \vu{r} \vu{\boldsymbol{\varphi}} \vu{r} - \vu{r} \vu{r} \vu{\boldsymbol{\varphi}} + i \vu{r} \vu{r} \vu{r}\right)
-				\bigg]
-		\end{align*}}
-	\end{frame}
+\section{Extra slides}
+
+\begin{frame}{$\hat{\chi}^{(2)}_{\text{2D TMDC}}$ tensor in cylindrical coordinates}
+	\begin{equation*}
+		\chi^{(2)}_{\{\ell n m\}_{\text{cyl}}} = R^{-1}_{\ell i} R^{-1}_{n j} R^{-1}_{m k} \chi^{(2)}_{\{ijk\}_{\text{cart}}}, \qquad R^{-1}(\varphi) = \begin{pmatrix}
+			\cos(\varphi) & \sin(\varphi) & 0 \\
+			-\sin(\varphi) & \cos(\varphi) & 0 \\
+			0 & 0  & 1
+		\end{pmatrix}
+	\end{equation*}
+	{\tiny\begin{align*}
+			\chi^{(2)}_{\text{2D TMDC}}  = \tilde{\chi}^{\text{TMDC}}_{\text{2D}}
+			&\left[\left[\begin{array}{ccc}
+				0 & -1 & 0 \\
+				-1 & 0 & 0 \\
+				0 & 0 & 0
+			\end{array}\right]\left[\begin{array}{ccc}
+				-1 & 0 & 0 \\
+				0 & 1 & 0 \\
+				0 & 0 & 0
+			\end{array}\right]\left[\begin{array}{lll}
+				0 & 0 & 0 \\
+				0 & 0 & 0 \\
+				0 & 0 & 0
+			\end{array}\right]\right]_{(\vu{x}\vu{y}\vu{z})}
+			\\ = \tilde{\chi}^{\text{TMDC}}_{\text{2D}}
+			&\left[\left[\begin{array}{ccc}
+				-\sin (3 \varphi) & -\cos (3 \varphi) & 0 \\
+				-\cos (3 \varphi) & \sin (3 \varphi) & 0 \\
+				0 & 0 & 0
+			\end{array}\right]\left[\begin{array}{ccc}
+				-\cos (3 \varphi) & \sin (3 \varphi) & 0 \\
+				\sin (3 \varphi) & \cos (3 \varphi) & 0 \\
+				0 & 0 & 0
+			\end{array}\right]\left[\begin{array}{lll}
+				0 & 0 & 0 \\
+				0 & 0 & 0 \\
+				0 & 0 & 0
+			\end{array}\right]\right]_{(\vu{r},\vu{\boldsymbol{\varphi}}, \vu{z})}
+			\\ =
+			\tilde{\chi}^{\text{TMDC}}_{\text{2D}} & \bigg[ 
+			\frac{1}{2} e^{-3i \varphi} \left( \vu{\boldsymbol{\varphi}} \vu{\boldsymbol{\varphi}} \vu{\boldsymbol{\varphi}} + i \vu{\boldsymbol{\varphi}} \vu{\boldsymbol{\varphi}} \vu{r} + i \vu{\boldsymbol{\varphi}} \vu{r} \vu{\boldsymbol{\varphi}} - \vu{\boldsymbol{\varphi}} \vu{r} \vu{r} + i \vu{r} \vu{\boldsymbol{\varphi}} \vu{\boldsymbol{\varphi}} - \vu{r} \vu{\boldsymbol{\varphi}} \vu{r} - \vu{r} \vu{r} \vu{\boldsymbol{\varphi}} - i \vu{r} \vu{r} \vu{r}\right) 
+			\nonumber \\ &
+			+ \frac{1}{2} e^{+3i \varphi}\left( \vu{\boldsymbol{\varphi}} \vu{\boldsymbol{\varphi}} \vu{\boldsymbol{\varphi}} - i \vu{\boldsymbol{\varphi}} \vu{\boldsymbol{\varphi}} \vu{r} -i \vu{\boldsymbol{\varphi}} \vu{r} \vu{\boldsymbol{\varphi}} - \vu{\boldsymbol{\varphi}} \vu{r} \vu{r}  - i\vu{r} \vu{\boldsymbol{\varphi}} \vu{\boldsymbol{\varphi}} - \vu{r} \vu{\boldsymbol{\varphi}} \vu{r} - \vu{r} \vu{r} \vu{\boldsymbol{\varphi}} + i \vu{r} \vu{r} \vu{r}\right)
+			\bigg]
+	\end{align*}}
+\end{frame}
 	
 \end{document}
