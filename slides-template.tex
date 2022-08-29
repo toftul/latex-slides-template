@@ -9,6 +9,7 @@ xcolor={dvipsnames} % https://tex.stackexchange.com/a/74807
 \usepackage{physics} 
 \usepackage{mathtools} 
 \usepackage{graphicx} % Allows including images
+\usepackage{tikz}
 
 % bibliography
 \usepackage[
@@ -108,6 +109,11 @@ xcolor={dvipsnames} % https://tex.stackexchange.com/a/74807
 	\hspace{1em}%
 	\insertframenumber/\inserttotalframenumber
 }
+
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+	\node[anchor=north east,yshift=2pt] at (current page.north east) {\includegraphics[height=0.6cm]{fig/ANU_Primary_Horizontal_GoldBlack}};
+\end{tikzpicture}}
 
 
 %-------------------
