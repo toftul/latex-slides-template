@@ -10,7 +10,12 @@ xcolor={dvipsnames} % https://tex.stackexchange.com/a/74807
 \usepackage{physics} 
 \usepackage{mathtools} 
 \usepackage{qrcode}
-\usepackage[russian]{babel} %Comment this line and delete all russian text for ENGLISH
+%Russian-specific packages
+%--------------------------------------
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}  % last is the main language
+%--------------------------------------
 \usepackage{graphicx} % Allows including images
 \usepackage{tikz}
 
