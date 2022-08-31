@@ -22,9 +22,12 @@
 
 ## Использование
 
+### Компиляция
 Компилируется с помощью pdflatexmk (по крайней мере, в TexShop) и Biber (не BibTeX!).
 
-Настоятельно советую использовать расширения BibItNow! для пополенения `references.bib` файла. Расширение доступно для [chrome-based](https://chrome.google.com/webstore/detail/bibitnow/bmnfikjlonhkoojjfddnlbinkkapmldg?hl=en-US) и [firefox](https://addons.mozilla.org/en-US/firefox/addon/bibitnow/) браузеров.
+
+### Библиография
+Настоятельно советую использовать расширения [BibItNow!](https://chrome.google.com/webstore/detail/bibitnow/bmnfikjlonhkoojjfddnlbinkkapmldg?hl=en-US) для пополенения `references.bib` файла. Расширение доступно для [chrome-based](https://chrome.google.com/webstore/detail/bibitnow/bmnfikjlonhkoojjfddnlbinkkapmldg?hl=en-US) и [firefox](https://addons.mozilla.org/en-US/firefox/addon/bibitnow/) браузеров.
 
 ## Авторы
 
