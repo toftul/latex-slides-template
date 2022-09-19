@@ -4,6 +4,7 @@ aspectratio=169,
 xcolor={dvipsnames} % https://tex.stackexchange.com/a/74807
 ]{beamer}
 
+\usepackage[absolute,overlay]{textpos}%для хитрых текстов поверх всего
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{wrapfig}
@@ -40,6 +41,8 @@ xcolor={dvipsnames} % https://tex.stackexchange.com/a/74807
 \newcommand{\red}[1]{\textcolor{BrickRed}{#1}}
 \newcommand{\green}[1]{\textcolor{green!50!black}{#1}}
 \newcommand{\white}[1]{\textcolor{white}{#1}}
+
+\renewcommand{\vb}[1]{\text{\bf #1}} %костыль, а то жирные формулы не работают что-то
 
 % ------------
 % themes
@@ -215,6 +218,9 @@ xcolor={dvipsnames} % https://tex.stackexchange.com/a/74807
 				\caption{Схема установки/иллюстрация основной идеи/геометрия задачи~\footfullcite{Wigner}}
 	\end{figure}
 	Какой-то текст, или, например, формула $\int\limits_{-\infty}^\infty  e^{-x^2} \dd x=\sqrt\pi$
+	\begin{textblock}{0.5}(10.5,11.7)
+		 \large{\red{Текст, который вы решили расположить поверх всего}}
+	\end{textblock}
 \end{frame}
 
 
