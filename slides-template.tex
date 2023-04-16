@@ -127,10 +127,19 @@ xcolor={dvipsnames} % https://tex.stackexchange.com/a/74807
 	\insertframenumber/\inserttotalframenumber
 }
 
+% options for logo: 
+% logo_faculty_only
+% logo
+% logo2
+% logo3
+% logo4
+
+
 \addtobeamertemplate{frametitle}{}{%
 \begin{tikzpicture}[remember picture,overlay]
-	\node[anchor=north east,yshift=2pt] at (current page.north east) {\includegraphics[height=0.7cm]{fig/logo}};
+	\node[anchor=north east,yshift=2pt] at (current page.north east) {\includegraphics[height=0.7cm]{fig/logo_faculty_only}};  
 \end{tikzpicture}}
+
 
 
 %\pgfdeclareimage[height=1.3cm]{uni}{fig/logo}
